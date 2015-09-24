@@ -1,0 +1,19 @@
+{application, tycho,
+[
+    {description, "tycho"},
+    {vsn, "1.0.0"},
+    {modules,
+        [ tycho
+        , tycho_app, tycho_sup
+        ] },
+    {registered,
+        [ tycho
+        ] },
+    {applications,
+        [ kernel, stdlib, crypto
+        , lager, erlangx, erlx_frontloader
+        ] },
+    {mod, { tycho_app, []}},
+    {env, []}
+]}.
+

@@ -1,0 +1,31 @@
+
+
+{ listener
+, mainserver
+, [ {acceptors, 32}
+  , {http, 80}
+  , {https, 443}
+  ]
+}.
+
+
+{ site, "warbeard.monolith.one"
+, mainserver
+, [
+  ]
+}.
+
+
+{ site, "warbeard.monolith.one"
+, mainserver
+, {wbd_front_loader, via, 'warbeard@127.0.0.1'}, []
+}.
+
+
+{ site, ":domain.monolith.one"
+, mainserver
+, constraint
+, [{"domain", function, fun test_for_account/1}]
+, [
+  ]
+}.  

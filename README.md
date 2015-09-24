@@ -1,2 +1,3 @@
-# erlang-tycho
-Tycho web frontend for Monolith
+
+Project tycho 1.0.0
+
